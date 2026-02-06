@@ -1,0 +1,16 @@
+{
+  "name": "env-cli",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "bun build --compile --outfile dist/get_env src/index.ts && rm -rf .*.bun-build",
+    "install": "sudo cp ./dist/get_env /usr/local/bin"
+  },
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
